@@ -21,3 +21,23 @@
 # Import all .cnf files from configuration directory
 !includedir /etc/mysql/conf.d/
 !includedir /etc/mysql/mariadb.conf.d/
+
+#Cluster
+wsrep_provider=/usr/lib/libgalera_smm.so
+
+wsrep_cluster_name=pxc-cluster
+wsrep_cluster_address=gcomm://172.18.110.32,172.18.110.33,172.18.110.34
+
+wsrep_node_name=galera02
+wsrep_node_address=172.18.110.33
+bind-address=172.18.110.33
+server-id=1002
+
+wsrep_sst_method=xtrabackup-v2
+wsrep_sst_auth=sstuser:projekt
+
+pxc_strict_mode=ENFORCING
+
+binlog_format=ROW
+default_storage_engine=InnoDB
+innodb_autoinc_lock_mode=2
