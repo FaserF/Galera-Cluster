@@ -9,15 +9,26 @@ Eine vollständige Anleitung und beschreibung befindet sich in meiner Projektdok
 
 ### Konfigurationsdateien
 
-Hinweise:
+#### Hinweise:
 $Node=Knotenzahl (z.B. 1)
 /home/galera sollte mit /home/username oder ~/ ersetzt werden
 
+#### Befehle
 - apt-get install git
 - cd /home/galera/
 - git clone https://github.com/FaserF/Galera-Cluster.git
 - cp /home/galera/Galera-Cluster/mysql.cnf /etc/mysql/conf.d/
 - cp /home/galera/Galera-Cluster/galera-$Node.cnf /etc/mysql/conf.d/
+
+#### Cluster starten
+Alle MySQL Knoten sollten nun gestoppt sein!
+service mysql stop
+
+Zum starten des ersten Knoten folgenden Befehl verwenden:
+service mysql start --wsrep-new-cluster
+
+Alle weiteren Knoten werden durch folgenden Befehl gestartet
+service mysql start
 
 ### Beispiel Datenbanken für Syncronistationstests
 
