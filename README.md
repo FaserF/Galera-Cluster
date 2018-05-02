@@ -3,21 +3,22 @@
 ## von Fabian Seitz
 ## Beschreibung
 
-Eine vollständige Anleitung und beschreibung befindet sich in meiner Projektdokumentation
+Eine vollständige Anleitung und Beschreibung befindet sich in meiner Projektdokumentation
 
 ## Wie nutze ich die Dateien auf einem Knotenpunkt?
 
 ### Konfigurationsdateien
 
 #### Hinweise:
-$Node=Knotenzahl (z.B. 001)
+$Node=Knotenzahl (z.B. 1)
 /home/galera sollte mit /home/username oder ~/ ersetzt werden
 
 #### Befehle
 - apt-get install git
 - cd /home/galera/
 - git clone https://github.com/FaserF/Galera-Cluster.git
-- cp /home/galera/Galera-Cluster/my-$Node.cnf /etc/mysql/my.cnf
+- cp /home/galera/Galera-Cluster/mysql.cnf /etc/mysql/conf.d/
+- cp /home/galera/Galera-Cluster/galera-$Node.cnf /etc/mysql/conf.d/
 
 #### Cluster starten
 Alle MySQL Knoten sollten nun gestoppt sein!
