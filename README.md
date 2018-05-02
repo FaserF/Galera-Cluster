@@ -9,13 +9,15 @@ Eine vollständige Anleitung und beschreibung befindet sich in meiner Projektdok
 
 ### Konfigurationsdateien
 
+Hinweise:
 $Node=Knotenzahl (z.B. 1)
+/home/galera sollte mit /home/username oder ~/ ersetzt werden
 
 - apt-get install git
-- cd ~
+- cd /home/galera/
 - git clone https://github.com/FaserF/Galera-Cluster.git
-- cp ~/Galera-Cluster/mysql.cnf /etc/mysql/conf.d/
-- cp ~/Galera-Cluster/galera-$Node.cnf /etc/mysql/conf.d/
+- cp /home/galera/Galera-Cluster/mysql.cnf /etc/mysql/conf.d/
+- cp /home/galera/Galera-Cluster/galera-$Node.cnf /etc/mysql/conf.d/
 
 ### Beispiel Datenbanken für Syncronistationstests
 
