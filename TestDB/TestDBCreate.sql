@@ -1,0 +1,13 @@
+DROP DATABASE IF EXISTS ClusterTestDB;
+CREATE DATABASE ClusterTestDB;
+USE ClusterTestDB;
+
+DROP TABLE IF EXISTS Beruf;
+
+CREATE TABLE Beruf (
+Nachname VARCHAR(40), 
+Vorname VARCHAR(20), 
+Geburtsdatum DATE,
+Beruf VARCHAR(60));
+
+LOAD DATA LOCAL INFILE './BigDBBeruf.txt' INTO TABLE Beruf LINES TERMINATED BY '\r\n';
