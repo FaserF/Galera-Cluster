@@ -23,6 +23,7 @@
 !includedir /etc/mysql/mariadb.conf.d/
 
 #Cluster
+[mysqld]
 wsrep_provider=/usr/lib/libgalera_smm.so
 
 wsrep_cluster_name=pxc-cluster
@@ -34,7 +35,7 @@ bind-address=172.18.110.32
 server-id=1001
 
 wsrep_sst_method=xtrabackup-v2
-wsrep_sst_auth=sstuser:projekt
+wsrep_sst_auth=galera:projekt
 
 pxc_strict_mode=ENFORCING
 

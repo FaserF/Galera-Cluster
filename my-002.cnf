@@ -34,7 +34,7 @@ bind-address=172.18.110.33
 server-id=1002
 
 wsrep_sst_method=xtrabackup-v2
-wsrep_sst_auth=sstuser:projekt
+wsrep_sst_auth=galera:projekt
 
 pxc_strict_mode=ENFORCING
 
