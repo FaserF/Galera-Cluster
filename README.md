@@ -10,15 +10,14 @@ Eine vollständige Anleitung und beschreibung befindet sich in meiner Projektdok
 ### Konfigurationsdateien
 
 #### Hinweise:
-$Node=Knotenzahl (z.B. 1)
+$Node=Knotenzahl (z.B. 001)
 /home/galera sollte mit /home/username oder ~/ ersetzt werden
 
 #### Befehle
 - apt-get install git
 - cd /home/galera/
 - git clone https://github.com/FaserF/Galera-Cluster.git
-- cp /home/galera/Galera-Cluster/mysql.cnf /etc/mysql/conf.d/
-- cp /home/galera/Galera-Cluster/galera-$Node.cnf /etc/mysql/conf.d/
+- cp /home/galera/Galera-Cluster/my-$Node.cnf /etc/mysql/my.cnf
 
 #### Cluster starten
 Alle MySQL Knoten sollten nun gestoppt sein!
