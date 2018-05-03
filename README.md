@@ -10,7 +10,7 @@ Eine vollständige Anleitung und Beschreibung befindet sich in meiner Projektdok
 ### Konfigurationsdateien
 
 #### Hinweise:
-$Node=Knotenzahl (z.B. 1)
+$Node=Knotenzahl (z.B. 001)
 /home/galera sollte mit /home/username oder ~/ ersetzt werden
 
 #### Befehle
